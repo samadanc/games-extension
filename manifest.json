@@ -1,0 +1,26 @@
+{
+    "name": "The Classics and more!...",
+    "version": "0.0.0.1",
+    "description": "Loading a page? Waiting for an email? Bored, in general? Here are classic games for you to play while waiting on a web page.",
+    "icons": {
+        "128": "/resources/icons/icon.jpg"
+    },
+    "manifest_version": 2,
+    "background": {
+      "scripts": ["/javascript/background.js"]
+    },
+    "browser_action": {
+        "default_icon": "/resources/icons/icon.jpg",
+        "default_popup": "popup.html"
+    },
+    "content_scripts":  [
+      {
+        "css": ["css/page_style.css"],
+        "js": ["javascript/page.js"],
+        "matches": ["http://*/*","https://*/*"]
+      }
+    ],
+   "permissions": [
+    "activeTab"
+    ]
+}
